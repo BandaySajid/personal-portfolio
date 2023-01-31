@@ -1,0 +1,76 @@
+body {
+    background: #333 url('/img/bg.png');
+    color: #fff;
+    font-family: 'Russo One', sans-serif;
+}
+
+hr {
+    border-color: #000;
+}
+
+small {
+    color: #c4c4c4;
+    font-size: 75%;
+}
+
+.gray {
+    color: #cacaca;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: #F87920;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.bri_orange {
+    color: #F87920;
+}
+
+.front_and_center {
+    margin-top: 30px;
+    text-align: center;
+    width: 600px;
+}
+
+.icon_set a {
+    color: #eee;
+}
+
+.icon_set i {
+    margin: 0 5px;
+}
+
+.icon_set i:hover {
+    color: #888;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.cool_button {
+    display: block;
+    padding: 10px;
+    background: rgba(25, 25, 25, .5);
+    border-radius: 10px;
+    color: #fff !important;
+}
+
+.cool_button:hover {
+    color: #F87920;
+    text-decoration: none;
+    background: #181818;
+}
