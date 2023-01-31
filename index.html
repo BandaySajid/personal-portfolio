@@ -55,7 +55,32 @@
                     $('.' + second).slideDown('fast');
                 });
             };
+
+
         });
+
+        (async function () {
+            const resp = await fetch('https://api.github.com/users/BandaySajid/repos', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const parsedData = await resp.json();
+            const repos = parsedData.map((repo) => {
+                return {
+                    url: repo.html_url,
+                    name: repo.name
+                }
+            });
+
+            repos.forEach((repo, i) => {
+                const container = document.querySelector('#project-container');
+                container.innerHTML += `<div class="project col-lg-6 col-md-6 col-sm-6">
+                <a style="text-decoration:none;" href="${repo.url}" target="blank_" class="bri_orange project-name">${i + 1}. ${repo.name.toUpperCase()}</a></div>`
+            })
+
+        })()
     </script>
     <div class="container center main_slide"
         style="min-width: 655px; max-width: 630px; width: auto; margin-top: 60px; margin-bottom: 150px; background: rgba(0,0,0,.1);">
@@ -72,8 +97,34 @@
                 </div>
                 <br>
                 <div class="address">
-                    Email : 
+                    Email :
                     <span class="bri_orange">ibandaysajid@gmail.com</span>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-12" style="margin-bottom: 10px;">
+                        <h4 style="margin-top: 0;">things I'm good at</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 code-icons">
+                        <i class="icon-nodejs" data-toggle="tooltip" data-placement="top" title="NodeJS"
+                            style="color: #80BD01;"></i>
+                        <i class="icon-javascript" data-toggle="tooltip" data-placement="top" title="JavaScript"
+                            style="color: #FEF728;"></i>
+                        <i class="icon-python" data-toggle="tooltip" data-placement="top" title="Python"
+                            style="color: #FFCF3E;"></i>
+                        <i class="icon-ubuntu" data-toggle="tooltip" data-placement="top" title="Ubuntu"
+                            style="color: #FFE0AC;"></i>
+                        <i class="icon-css" data-toggle="tooltip" data-placement="top" title="CSS"
+                            style="color: #2BA8E0;"></i>
+                        <i class="icon-html" data-toggle="tooltip" data-placement="top" title="HTML"
+                            style="color: #F1642C;"></i>
+                        <i class="icon-database" data-toggle="tooltip" data-placement="top" title="SQL"
+                            style="color: #F1642C;"></i>
+                        <i class="icon-redis" data-toggle="tooltip" data-placement="top" title="Redis"
+                            style="color: #D82C20; margin-right: 0;"></i>
+                    </div>
                 </div>
             </div>
             <div class="col-xs-6 left">
@@ -101,27 +152,11 @@
 
         <div class="row">
             <div class="col-xs-12" style="margin-bottom: 10px;">
-                <h4 style="margin-top: 0;">things i'm good at</h4>
+                <h4 style="margin-top: 0;">my projects</h4>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 code-icons">
-                <i class="icon-nodejs" data-toggle="tooltip" data-placement="top" title="NodeJS"
-                    style="color: #80BD01;"></i>
-                <i class="icon-javascript" data-toggle="tooltip" data-placement="top" title="JavaScript"
-                    style="color: #FEF728;"></i>
-                <i class="icon-python" data-toggle="tooltip" data-placement="top" title="Python"
-                    style="color: #FFCF3E;"></i>
-                <i class="icon-ubuntu" data-toggle="tooltip" data-placement="top" title="Ubuntu"
-                    style="color: #FFE0AC;"></i>
-                <i class="icon-css" data-toggle="tooltip" data-placement="top" title="CSS" style="color: #2BA8E0;"></i>
-                <i class="icon-html" data-toggle="tooltip" data-placement="top" title="HTML"
-                    style="color: #F1642C;"></i>
-                <i class="icon-database" data-toggle="tooltip" data-placement="top" title="SQL"
-                    style="color: #F1642C;"></i>
-                <i class="icon-redis" data-toggle="tooltip" data-placement="top" title="Redis"
-                    style="color: #D82C20; margin-right: 0;"></i>
-            </div>
+        <div class="row" id="project-container">
+            
         </div>
     </div>
 </body>
