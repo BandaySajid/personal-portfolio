@@ -8,6 +8,12 @@ hr {
     border-color: #000;
 }
 
+@media screen and (min-width: 655px) {
+    .container.center.main_slide {
+        width: 655px;
+    }
+}
+
 small {
     color: #c4c4c4;
     font-size: 75%;
