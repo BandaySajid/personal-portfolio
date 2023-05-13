@@ -47,6 +47,10 @@ a:hover {
     color: #eee;
 }
 
+.logo{
+    transform: rotate(2deg);
+}
+
 .icon_set i {
     margin: 0 5px;
 }
