@@ -89,25 +89,25 @@
         };
       });
 
-      async function sendClickEvent(e) {
-        console.log("sending event");
-        const url = new URL(window.location.href);
-        const social = e.target.id;
-        console.log(url.search);
+      // async function sendClickEvent(e) {
+      //   console.log("sending event");
+      //   const url = new URL(window.location.href);
+      //   const social = e.target.id;
+      //   console.log(url.search);
 
-        const urlParams = new URLSearchParams();
-        urlParams.append("url", url.search);
-        urlParams.append("social", social);
+      //   const urlParams = new URLSearchParams();
+      //   urlParams.append("url", url.search);
+      //   urlParams.append("social", social);
 
-        await fetch(`${apiUrl}/clickEvent?${urlParams.toString()}`);
-      }
+      //   await fetch(`${apiUrl}/clickEvent?${urlParams.toString()}`);
+      // }
 
       $(document).ready(async function () {
-        const url = new URL(window.location.href);
-        const urlParams = new URLSearchParams();
-        urlParams.append("url", url.search);
+        // const url = new URL(window.location.href);
+        // const urlParams = new URLSearchParams();
+        // urlParams.append("url", url.search);
 
-        await fetch(`${apiUrl}/visitEvent?${urlParams.toString()}`);
+        // await fetch(`${apiUrl}/visitEvent?${urlParams.toString()}`);
 
         const resp = await fetch(
           "https://api.github.com/users/BandaySajid/repos",
@@ -155,14 +155,14 @@
             <a href="https://github.com/BandaySajid" target="_blank"
               ><i
                 id="github"
-                onclick="sendClickEvent(event)"
+                <!-- onclick="sendClickEvent(event)" -->
                 class="fa fa-github-square fa-3x"
               ></i
             ></a>
             <a href="https://twitter.com/BandayySajid" target="_blank"
               ><i
                 id="twitter"
-                onclick="sendClickEvent(event)"
+                <!-- onclick="sendClickEvent(event)" -->
                 class="fa fa-twitter-square fa-3x"
               ></i
             ></a>
@@ -171,7 +171,7 @@
               target="_blank"
               ><i
                 id="linkedIN"
-                onclick="sendClickEvent(event)"
+                <!-- onclick="sendClickEvent(event)" -->
                 class="fa fa-linkedin-square fa-3x"
               ></i
             ></a>
