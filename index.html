@@ -77,8 +77,7 @@
       }
     </style>
     <script>
-
-      const apiUrl = 'https://sajid-insta-api.glitch.me'
+      const apiUrl = "https://sajid-insta-api.glitch.me";
       $(function () {
         $(".code-icons i").tooltip();
 
@@ -89,26 +88,7 @@
         };
       });
 
-      // async function sendClickEvent(e) {
-      //   console.log("sending event");
-      //   const url = new URL(window.location.href);
-      //   const social = e.target.id;
-      //   console.log(url.search);
-
-      //   const urlParams = new URLSearchParams();
-      //   urlParams.append("url", url.search);
-      //   urlParams.append("social", social);
-
-      //   await fetch(`${apiUrl}/clickEvent?${urlParams.toString()}`);
-      // }
-
       $(document).ready(async function () {
-        // const url = new URL(window.location.href);
-        // const urlParams = new URLSearchParams();
-        // urlParams.append("url", url.search);
-
-        // await fetch(`${apiUrl}/visitEvent?${urlParams.toString()}`);
-
         const resp = await fetch(
           "https://api.github.com/users/BandaySajid/repos",
           {
@@ -153,27 +133,15 @@
           <img class="logo" src="/img/web_logo.png" /><br /><br />
           <div class="icon_set" style="position: relative; z-index: 2">
             <a href="https://github.com/BandaySajid" target="_blank"
-              ><i
-                id="github"
-                <!-- onclick="sendClickEvent(event)" -->
-                class="fa fa-github-square fa-3x"
-              ></i
+              ><i id="github" class="fa fa-github-square fa-3x"></i
             ></a>
             <a href="https://twitter.com/BandayySajid" target="_blank"
-              ><i
-                id="twitter"
-                <!-- onclick="sendClickEvent(event)" -->
-                class="fa fa-twitter-square fa-3x"
-              ></i
+              ><i id="twitter" class="fa fa-twitter-square fa-3x"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/sajid-banday-521b6b240"
               target="_blank"
-              ><i
-                id="linkedIN"
-                <!-- onclick="sendClickEvent(event)" -->
-                class="fa fa-linkedin-square fa-3x"
-              ></i
+              ><i id="linkedIN" class="fa fa-linkedin-square fa-3x"></i
             ></a>
           </div>
           <br />
