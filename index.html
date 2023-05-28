@@ -77,7 +77,6 @@
       }
     </style>
     <script>
-      const apiUrl = "https://sajid-insta-api.glitch.me";
       $(function () {
         $(".code-icons i").tooltip();
 
@@ -90,7 +89,7 @@
 
       $(document).ready(async function () {
         const resp = await fetch(
-          "https://api.github.com/users/BandaySajid/repos",
+          "https://raw.githubusercontent.com/BandaySajid/projects-repo/main/projects.json",
           {
             method: "GET",
             headers: {
@@ -99,13 +98,8 @@
           }
         );
 
-        const parsedData = await resp.json();
-        const repos = parsedData.map((repo) => {
-          return {
-            url: repo.html_url,
-            name: repo.name,
-          };
-        });
+        const jsonResp = await resp.json();
+        const repos = JSON.parse(jsonResp);
 
         repos.forEach((repo, i) => {
           const container = document.querySelector("#project-container");
