@@ -89,7 +89,7 @@
 
       $(document).ready(async function () {
         const resp = await fetch(
-          "https://raw.githubusercontent.com/BandaySajid/projects-repo/main/projects.json",
+          "https://api.github.com/users/BandaySajid/repos",
           {
             method: "GET",
             headers: {
@@ -98,8 +98,14 @@
           }
         );
 
-        const jsonResp = await resp.json();
-        const repos = JSON.parse(jsonResp);
+        const parsedData = await resp.json();
+        const repos = parsedData.map((repo) => {
+          return {
+            url: repo.html_url,
+            name: repo.name,
+          };
+        });
+
 
         repos.forEach((repo, i) => {
           const container = document.querySelector("#project-container");
