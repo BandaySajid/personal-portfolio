@@ -77,8 +77,6 @@
       }
     </style>
     <script>
-
-      const apiUrl = 'http://127.0.0.1:9090';
       $(function () {
         $(".code-icons i").tooltip();
 
@@ -89,43 +87,53 @@
         };
       });
 
-      async function sendClickEvent(e) {
-        console.log("sending event");
-        const url = new URL(window.location.href);
-        const social = e.target.id;
-        console.log(url.search);
-
-        const urlParams = new URLSearchParams();
-        urlParams.append("url", url.search);
-        urlParams.append("social", social);
-
-        await fetch(`${apiUrl}/clickEvent?${urlParams.toString()}`);
-      }
-
       $(document).ready(async function () {
-        const url = new URL(window.location.href);
-        const urlParams = new URLSearchParams();
-        urlParams.append("url", url.search);
-
-        await fetch(`${apiUrl}/visitEvent?${urlParams.toString()}`);
-
-        const resp = await fetch(
-          "https://api.github.com/users/BandaySajid/repos",
+        const repos = [
           {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-
-        const parsedData = await resp.json();
-        const repos = parsedData.map((repo) => {
-          return {
-            url: repo.html_url,
-            name: repo.name,
-          };
-        });
+            url: "https://github.com/BandaySajid/aadhaar-js",
+            name: "aadhaar-js",
+          },
+          {
+            url: "https://github.com/BandaySajid/collaborator",
+            name: "collaborator",
+          },
+          {
+            url: "https://github.com/BandaySajid/crypto-price-tracker",
+            name: "crypto-price-tracker",
+          },
+          {
+            url: "https://github.com/BandaySajid/data-processing-ratelimiting",
+            name: "data-processing-ratelimiting",
+          },
+          {
+            url: "https://github.com/BandaySajid/load-balancing-using-nginx",
+            name: "load-balancing-using-nginx",
+          },
+          {
+            url: "https://github.com/BandaySajid/node-file-watcher",
+            name: "node-file-watcher",
+          },
+          {
+            url: "https://github.com/BandaySajid/personal-portfolio",
+            name: "personal-portfolio",
+          },
+          {
+            url: "https://github.com/BandaySajid/raw-binary-buffer-implemenation",
+            name: "raw-binary-buffer-implemenation",
+          },
+          {
+            url: "https://github.com/BandaySajid/realtime-chat-app",
+            name: "realtime-chat-app",
+          },
+          {
+            url: "https://github.com/BandaySajid/tcp-socket-programming",
+            name: "tcp-socket-programming",
+          },
+          {
+            url: "https://github.com/BandaySajid/Twitter-Bot-",
+            name: "Twitter-Bot-",
+          },
+        ];
 
         repos.forEach((repo, i) => {
           const container = document.querySelector("#project-container");
@@ -153,27 +161,15 @@
           <img class="logo" src="/img/web_logo.png" /><br /><br />
           <div class="icon_set" style="position: relative; z-index: 2">
             <a href="https://github.com/BandaySajid" target="_blank"
-              ><i
-                id="github"
-                onclick="sendClickEvent(event)"
-                class="fa fa-github-square fa-3x"
-              ></i
+              ><i id="github" class="fa fa-github-square fa-3x"></i
             ></a>
             <a href="https://twitter.com/BandayySajid" target="_blank"
-              ><i
-                id="twitter"
-                onclick="sendClickEvent(event)"
-                class="fa fa-twitter-square fa-3x"
-              ></i
+              ><i id="twitter" class="fa fa-twitter-square fa-3x"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/sajid-banday-521b6b240"
               target="_blank"
-              ><i
-                id="linkedIN"
-                onclick="sendClickEvent(event)"
-                class="fa fa-linkedin-square fa-3x"
-              ></i
+              ><i id="linkedIN" class="fa fa-linkedin-square fa-3x"></i
             ></a>
           </div>
           <br />
