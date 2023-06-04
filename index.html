@@ -88,23 +88,54 @@
       });
 
       $(document).ready(async function () {
+        const repos = [
         const resp = await fetch(
           "https://api.github.com/users/BandaySajid/repos",
           {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-
-        const parsedData = await resp.json();
-        const repos = parsedData.map((repo) => {
-          return {
-            url: repo.html_url,
-            name: repo.name,
-          };
-        });
+            url: "https://github.com/BandaySajid/aadhaar-js",
+            name: "aadhaar-js",
+          },
+          {
+            url: "https://github.com/BandaySajid/collaborator",
+            name: "collaborator",
+          },
+          {
+            url: "https://github.com/BandaySajid/crypto-price-tracker",
+            name: "crypto-price-tracker",
+          },
+          {
+            url: "https://github.com/BandaySajid/data-processing-ratelimiting",
+            name: "data-processing-ratelimiting",
+          },
+          {
+            url: "https://github.com/BandaySajid/load-balancing-using-nginx",
+            name: "load-balancing-using-nginx",
+          },
+          {
+            url: "https://github.com/BandaySajid/node-file-watcher",
+            name: "node-file-watcher",
+          },
+          {
+            url: "https://github.com/BandaySajid/personal-portfolio",
+            name: "personal-portfolio",
+          },
+          {
+            url: "https://github.com/BandaySajid/raw-binary-buffer-implemenation",
+            name: "raw-binary-buffer-implemenation",
+          },
+          {
+            url: "https://github.com/BandaySajid/realtime-chat-app",
+            name: "realtime-chat-app",
+          },
+          {
+            url: "https://github.com/BandaySajid/tcp-socket-programming",
+            name: "tcp-socket-programming",
+          },
+          {
+            url: "https://github.com/BandaySajid/Twitter-Bot-",
+            name: "Twitter-Bot-",
+          },
+        ];
 
 
         repos.forEach((repo, i) => {
