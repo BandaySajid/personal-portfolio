@@ -89,6 +89,8 @@
 
       $(document).ready(async function () {
         const repos = [
+        const resp = await fetch(
+          "https://api.github.com/users/BandaySajid/repos",
           {
             url: "https://github.com/BandaySajid/aadhaar-js",
             name: "aadhaar-js",
@@ -134,6 +136,7 @@
             name: "Twitter-Bot-",
           },
         ];
+
 
         repos.forEach((repo, i) => {
           const container = document.querySelector("#project-container");
