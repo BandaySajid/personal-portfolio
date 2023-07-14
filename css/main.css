@@ -47,7 +47,7 @@ a:hover {
     color: #eee;
 }
 
-.logo{
+.logo {
     transform: rotate(2deg);
 }
 
@@ -83,4 +83,20 @@ a:hover {
     color: #F87920;
     text-decoration: none;
     background: #181818;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+.stream-container {
+    overflow: hidden;
+}
+
+.text-stream {
+    display: inline-block;
+    white-space: pre-line;
+    animation: typing 1s steps(70) 1s forwards;
 }
