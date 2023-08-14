@@ -1,225 +1,187 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Sajid Banday</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <meta
+      name="KEYWORDS"
+      content="sajid banday, software engineering, programming, developer"
+    />
+    <meta
+      name="DESCRIPTION"
+      content="Sajid Banday is a Kashmir-based software enthusiast and aspiring developer with a strong drive to learn and grow. He is passionate about creating innovative solutions and building a career in software engineering. With a solid foundation in programming and a hunger for new challenges, Sajid is eager to contribute to the tech community and help businesses achieve their goals. Contact him today to see how he can help bring your ideas to life."
+    />
 
-<head>
-  <title>Sajid Banday</title>
-  <meta name="viewport" content="width=device-width, initial-scale=0.8" />
-  <meta name="KEYWORDS" content="sajid banday, software engineering, programming, developer" />
-  <meta name="DESCRIPTION"
-    content="Sajid Banday is a Kashmir-based software enthusiast and aspiring programmer with a strong drive to learn and grow. He is passionate about creating innovative solutions and building a career in software engineering. With a solid foundation in programming and a hunger for new challenges, Sajid is eager to contribute to the tech community and help businesses achieve their goals. Contact him today to see how he can help bring your ideas to life." />
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Russo+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/lib/mfizz/font-mfizz.css" type="text/css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
 
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-  <link href="//fonts.googleapis.com/css?family=Russo+One" rel="stylesheet" type="text/css" />
-  <link href="/lib/mfizz/font-mfizz.css" type="text/css" rel="stylesheet" />
-  <link href="/css/main.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-    crossorigin="anonymous"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="SHORTCUT ICON" href="/img/web_logo.png" />
+  </head>
 
-  <link rel="SHORTCUT ICON" href="/img/web_logo.png" />
-</head>
-
-<body>
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i["GoogleAnalyticsObject"] = r;
-      (i[r] =
-        i[r] ||
-        function () {
-          (i[r].q = i[r].q || []).push(arguments);
-        }),
-        (i[r].l = 1 * new Date());
-      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      "script",
-      "//www.google-analytics.com/analytics.js",
-      "ga"
-    );
-
-    ga("create", "UA-28939284-3", "auto");
-    ga("send", "pageview");
-  </script>
-  <style>
-    .code-icons i {
-      font-size: 34px;
-      cursor: pointer;
-      margin-right: 4px;
-    }
-
-    .resume_slide,
-    .showcase_slide {
-      width: 630px;
-      margin-top: 100px;
-      display: none;
-    }
-  </style>
-  <script>
-    $(function () {
-      $(".code-icons i").tooltip();
-
-      toggle_things = function (first, second) {
-        $("." + first).slideUp("fast", function () {
-          $("." + second).slideDown("fast");
-        });
-      };
-    });
-
-    $(document).ready(async function () {
-      const repos = [
-        {
-          url: "https://github.com/BandaySajid/aadhaar-js",
-          name: "aadhaar-js",
-        },
-        {
-          url: "https://github.com/BandaySajid/chatgpt-node",
-          name: "chatgpt-node",
-        },
-        {
-          url: "https://github.com/BandaySajid/collaborator",
-          name: "collaborator",
-        },
-        {
-          url: "https://github.com/BandaySajid/crypto-price-tracker",
-          name: "crypto-price-tracker",
-        },
-        {
-          url: "https://github.com/BandaySajid/data-processing-ratelimiting",
-          name: "data-processing-ratelimiting",
-        },
-        {
-          url: "https://github.com/BandaySajid/load-balancing-using-nginx",
-          name: "load-balancing-using-nginx",
-        },
-        {
-          url: "https://github.com/BandaySajid/node-file-watcher",
-          name: "node-file-watcher",
-        },
-        {
-          url: "https://github.com/BandaySajid/personal-portfolio",
-          name: "personal-portfolio",
-        },
-        {
-          url: "https://github.com/BandaySajid/raw-binary-buffer-implemenation",
-          name: "raw-binary-buffer-implemenation",
-        },
-        {
-          url: "https://github.com/BandaySajid/scalable-chat-application",
-          name: "scalable-chat-app",
-        },
-        {
-          url: "https://github.com/BandaySajid/tcp-socket-programming",
-          name: "tcp-socket-programming",
-        },
-        {
-          url: "https://github.com/BandaySajid/Twitter-Bot-",
-          name: "Twitter-Bot-",
-        }
-      ];
-
-
-      repos.forEach((repo, i) => {
-        const container = document.querySelector("#project-container");
-        container.innerHTML += `<div class="project col-lg-6 col-md-6 col-sm-6">
-                  <a style="text-decoration:none;" href="${repo.url
-          }" target="blank_" class="bri_orange project-name">${i + 1
-          }. ${repo.name.toLowerCase()}</a></div>`;
-      });
-
-    });
-  </script>
-  <div class="container center main_slide" style="
+  <body>
+    <script src="js/script.js"></script>
+    <div
+      class="container center main_slide"
+      style="
         max-width: 630px;
         width: auto;
         margin-top: 60px;
         margin-bottom: 150px;
         background: rgba(0, 0, 0, 0.1);
-      ">
-    <div class="row" style="display: flex; align-items: center">
-      <div class="col-xs-6">
-        <img class="logo" src="/img/web_logo.png" /><br /><br />
-        <div class="icon_set" style="position: relative; z-index: 2">
-          <a href="https://github.com/BandaySajid" target="_blank"><i id="github"
-              class="fa fa-github-square fa-3x"></i></a>
-          <a href="https://twitter.com/BandayySajid" target="_blank"><i id="twitter"
-              class="fa fa-twitter-square fa-3x"></i></a>
-          <a href="https://www.linkedin.com/in/sajid-banday-521b6b240" target="_blank"><i id="linkedIN"
-              class="fa fa-linkedin-square fa-3x"></i></a>
-        </div>
-        <br />
-        <div class="address">
-          Email :
-          <span class="bri_orange">admin@sajidbanday.in</span>
-        </div>
-        <hr />
-        <div class="row">
-          <div class="col-xs-12" style="margin-bottom: 10px">
-            <h4 style="margin-top: 0">things I'm good at</h4>
+      "
+    >
+      <div class="row" style="display: flex; align-items: center">
+        <div class="col-xs-6">
+          <img class="logo" src="/img/web_logo.png" /><br /><br />
+          <div class="icon_set" style="position: relative; z-index: 2">
+            <a href="https://github.com/BandaySajid" target="_blank"
+              ><i id="github" class="fa fa-github-square fa-3x"></i
+            ></a>
+            <a href="https://twitter.com/BandayySajid" target="_blank"
+              ><i id="twitter" class="fa fa-twitter-square fa-3x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/sajid-banday-521b6b240"
+              target="_blank"
+              ><i id="linkedIN" class="fa fa-linkedin-square fa-3x"></i
+            ></a>
+          </div>
+          <br />
+          <div class="address">
+            Email :
+            <span class="bri_orange">admin@sajidbanday.in</span>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-xs-12" style="margin-bottom: 10px">
+              <h4 style="margin-top: 0">things I'm good at</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 code-icons">
+              <i
+                class="icon-nodejs"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="NodeJS"
+                style="color: #80bd01"
+              ></i>
+              <i
+                class="icon-javascript"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="JavaScript"
+                style="color: #fef728"
+              ></i>
+              <i
+                class="icon-python"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Python"
+                style="color: #ffcf3e"
+              ></i>
+              <i
+                class="icon-ubuntu"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Ubuntu"
+                style="color: #ffe0ac"
+              ></i>
+              <i
+                class="icon-aws"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Aws"
+                style="color: #ffcf3e"
+              ></i>
+              <i
+                class="icon-nginx"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Nginx"
+                style="color: #2ba8e0"
+              ></i>
+              <i
+                class="icon-database"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="SQL"
+                style="color: #f1642c"
+              ></i>
+              <i
+                class="icon-mysql"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="MYSQL"
+                style="color: #f1642c"
+              ></i>
+              <i
+                class="icon-redis"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Redis"
+                style="color: #d82c20; margin-right: 0"
+              ></i>
+              <i
+                class="icon-html"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="HTML"
+                style="color: #d82c20; margin-right: 0"
+              ></i>
+              <i
+                class="icon-css"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="CSS"
+                style="color: #2ba8e0; margin-right: 0"
+              ></i>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 code-icons">
-            <i class="icon-nodejs" data-toggle="tooltip" data-placement="top" title="NodeJS" style="color: #80bd01"></i>
-            <i class="icon-javascript" data-toggle="tooltip" data-placement="top" title="JavaScript"
-              style="color: #fef728"></i>
-            <i class="icon-python" data-toggle="tooltip" data-placement="top" title="Python" style="color: #ffcf3e"></i>
-            <i class="icon-ubuntu" data-toggle="tooltip" data-placement="top" title="Ubuntu" style="color: #ffe0ac"></i>
-            <i class="icon-aws" data-toggle="tooltip" data-placement="top" title="Aws" style="color: #ffcf3e"></i>
-            <i class="icon-nginx" data-toggle="tooltip" data-placement="top" title="Nginx" style="color: #2ba8e0"></i>
-            <i class="icon-database" data-toggle="tooltip" data-placement="top" title="SQL" style="color: #f1642c"></i>
-            <i class="icon-mysql" data-toggle="tooltip" data-placement="top" title="MYSQL" style="color: #f1642c"></i>
-            <i class="icon-redis" data-toggle="tooltip" data-placement="top" title="Redis"
-              style="color: #d82c20; margin-right: 0"></i>
-            <i class="icon-html" data-toggle="tooltip" data-placement="top" title="HTML"
-              style="color: #d82c20; margin-right: 0"></i>
-            <i class="icon-css" data-toggle="tooltip" data-placement="top" title="CSS"
-              style="color: #2ba8e0; margin-right: 0"></i>
-          </div>
+        <div class="col-xs-6 left">
+          <h3>Sajid<span class="bri_orange">Banday</span></h3>
+
+          <span style="color: #c9c9c9">
+            A passionate programmer who thrives on finding creative and efficient solutions to complex problems. I am passionate about backend-systems development, debugging and creating elegant code. I am always eager to collaborate with others to create amazing software that solves real-world problems. Let's work and code together to bring our ideas to life and build something truly remarkable.
+          </span>
         </div>
       </div>
-      <div class="col-xs-6 left stream-container">
-        <h3>Sajid<span class="bri_orange">Banday</span></h3>
 
-        <span style="color: #c9c9c9" class="text-stream">
+      <hr />
 
-        </span>
+      <div class="row">
+        <div class="col-xs-12" style="margin-bottom: 10px">
+          <h4 style="margin-top: 0">my projects</h4>
+          <div id="project-popup" class="popup">
+            <div class="popup-content">
+                <h2 id="popup-project-name" class="bri_orange"></h2>
+                <p id="popup-description"></p>
+                <a id="popup-link" target="_blank" class="popup-link">VISIT PROJECT</a>
+            </div>
+        </div>
+        </div>
       </div>
+      <div class="row" id="project-container"></div>
     </div>
-
-    <hr />
-
-    <div class="row">
-      <div class="col-xs-12" style="margin-bottom: 10px">
-        <h4 style="margin-top: 0">my projects</h4>
-      </div>
-    </div>
-    <div class="row" id="project-container"></div>
-  </div>
-</body>
-<script>
-  const text = `A passionate programmer who thrives on finding creative and efficient solutions to complex problems. My expertise lies in backend-systems development, debugging and creating elegant code that is easy to read and maintain. I am always eager to collaborate with others to create amazing software that solves real-world problems. Let's work and code together to bring our ideas to life and build something truly remarkable.`;
-
-  const textContainer = document.querySelector('.text-stream');
-  let index = 0;
-
-  function typeText() {
-    if (index < text.length) {
-      textContainer.textContent += text.charAt(index);
-      index++;
-      setTimeout(typeText, Math.random() * 50); // Adjust typing speed here
-    }
-  }
-
-  typeText();
-</script>
-
+  </body>
 </html>
